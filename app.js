@@ -5,6 +5,13 @@ const url = require('url');
 const PORT = 5176; // Port on which the proxy server will listen
 
 const requestHandler = (clientReq, clientRes) => {
+  
+  if (clientReq.method === 'GET') {
+    clientRes.writeHead(200, {'Content-Type': 'text/plain'});
+    clientRes.end('Proxy server is working!\n');
+    return;
+  }
+
   const options = {
     hostname: 'cdn.premarket.ly', // Destination hostname
     port: 443, // HTTPS port

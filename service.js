@@ -6,7 +6,7 @@ const axios = require("axios");
 app.use(cors());
 // set the port on which our app wil run
 // important to read from environment variable if deploying
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5176;
 
 // basic string route to prevent Glitch error
 app.get("/", (req, res) => {

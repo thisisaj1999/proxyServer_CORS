@@ -2,7 +2,7 @@ const http = require('http');
 const https = require('https');
 const url = require('url');
 
-const PORT = 8080; // Port on which the proxy server will listen
+const PORT = 5176; // Port on which the proxy server will listen
 
 const requestHandler = (clientReq, clientRes) => {
   const options = {
